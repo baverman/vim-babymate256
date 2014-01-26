@@ -5,7 +5,7 @@ from mako.template import Template
 
 import tcolor
 
-def hi(fg=None, bg=None, bold=None, italic=None):
+def hi(fg=None, bg=None, bold=None, italic=None, underline=None, reverse=None):
     parts = []
     if fg:
         parts.append(('guifg', '#' + fg))
@@ -15,12 +15,26 @@ def hi(fg=None, bg=None, bold=None, italic=None):
         parts.append(('guibg', '#' + bg))
         parts.append(('ctermbg', tcolor.find_nearest(bg)[1]))
 
-    if bold is not None:
-        parts.append(('cterm', 'bold'))
-        parts.append(('gui', 'bold'))
+    attrs = []
+    if bold:
+        attrs.append('bold')
 
-    if italic is not None:
-        parts.append(('gui', 'italic'))
+    if italic:
+        attrs.append('italic')
+
+    if underline:
+        attrs.append('underline')
+
+    if reverse:
+        attrs.append('reverse')
+
+    if not attrs:
+        attrs.append('none')
+
+    if attrs:
+        cattrs = ','.join(attrs)
+        parts.append(('gui', cattrs))
+        parts.append(('cterm', cattrs))
 
     return ' '.join('{}={}'.format(*r) for r in parts)
 
