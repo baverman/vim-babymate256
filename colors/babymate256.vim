@@ -80,6 +80,7 @@ hi Number guifg=#9cbddd ctermfg=110 gui=none cterm=none
 hi PreProc guifg=#ffc0cb ctermfg=217 gui=none cterm=none
 hi Function guifg=#cbf8b0 ctermfg=193 gui=none cterm=none
 hi Identifier guifg=#9cbddd ctermfg=110 gui=none cterm=none
+hi Builtin guifg=#9cbddd ctermfg=110 gui=none cterm=none
 hi Type guifg=#cbf8b0 ctermfg=193 gui=none cterm=none
 hi Special guifg=#e3e3e3 ctermfg=254 gui=none cterm=none
 hi String guifg=#9cbddd ctermfg=110 gui=none cterm=none
@@ -93,5 +94,8 @@ hi Boolean guifg=#9cbddd ctermfg=110 gui=none cterm=none
 hi! link FoldColumn Folded
 hi! link CursorColumn CursorLine
 hi! link ColorColumn CursorLine
+
+hi! link pythonBuiltin Builtin
+hi! link pythonKeyword Statement
 
 let g:babymate_color_fix = '\033]11;#222429\007\033]4;241;#666666\007\033]4;60;#506681\007\033]4;189;#D0CFFE\007\033]4;16;#000000\007\033]4;217;#FFC0CB\007\033]4;254;#E3E3E3\007\033]4;236;#31333B\007\033]4;110;#9CBDDD\007\033]4;193;#CBF8B0\007\033]4;235;#222429\007'

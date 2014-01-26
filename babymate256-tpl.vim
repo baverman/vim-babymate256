@@ -99,6 +99,7 @@ hi Number ${hi(babyblue)}
 hi PreProc ${hi(babypink)}
 hi Function ${hi(babygreen)}
 hi Identifier ${hi(babyblue, bold=True)}
+hi Builtin ${hi(babyblue, bold=True)}
 hi Type ${hi(babygreen)}
 hi Special ${hi(white, magenta)}
 hi String ${hi(babyblue)}
@@ -112,5 +113,8 @@ hi Boolean ${hi(babyblue, bold=True)}
 hi! link FoldColumn Folded
 hi! link CursorColumn CursorLine
 hi! link ColorColumn CursorLine
+
+hi! link pythonBuiltin Builtin
+hi! link pythonKeyword Statement
 
 let g:babymate_color_fix = '${hi.fix()}'
