@@ -15,6 +15,7 @@ endif
     colors_name = 'babymate256'
 
     # light
+    white     = 'e3e3e3'
     babygreen = 'cbf8b0'
     violet    = 'd0cffe'
     babypink  = 'ffc0cb'
@@ -27,7 +28,6 @@ endif
     ltcarbon = '31333b'
     slate    = '506681'
     grey     = '666666'
-    white    = 'e3e3e3'
 
     background = carbon
 %>
@@ -39,7 +39,7 @@ hi Normal ${hi(white, carbon)}
 hi Cursor ${hi(carbon, white)}
 hi Visual ${hi(bg=slate)}
 hi VisualNOS ${hi(white, grey)}
-hi Search ${hi(black, white)}
+hi Search ${hi(white, slate)}
 " hi Folded ${hi()}
 " hi Title ${hi()}
 " hi StatusLine ${hi()}

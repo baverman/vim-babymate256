@@ -20,7 +20,7 @@ hi Normal guifg=#e3e3e3 ctermfg=254 guibg=#222429 ctermbg=235 gui=none cterm=non
 hi Cursor guifg=#222429 ctermfg=235 guibg=#e3e3e3 ctermbg=254 gui=none cterm=none
 hi Visual guibg=#506681 ctermbg=60 gui=none cterm=none
 hi VisualNOS guifg=#e3e3e3 ctermfg=254 guibg=#666666 ctermbg=241 gui=none cterm=none
-hi Search guifg=#000000 ctermfg=16 guibg=#e3e3e3 ctermbg=254 gui=none cterm=none
+hi Search guifg=#e3e3e3 ctermfg=254 guibg=#506681 ctermbg=60 gui=none cterm=none
 " hi Folded gui=none cterm=none
 " hi Title gui=none cterm=none
 " hi StatusLine gui=none cterm=none
