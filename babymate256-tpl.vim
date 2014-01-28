@@ -44,7 +44,7 @@ hi VisualNOS ${hi(white, grey)}
 hi Search ${hi(white, slate)}
 hi Folded ${hi(grey, carbon)}
 " hi Title ${hi()}
-hi StatusLine ${hi(asfalto, ltgrey)}
+hi StatusLine ${hi(black, ltgrey)}
 hi StatusLineNC ${hi(grey, ltgrey)}
 hi VertSplit ${hi(ltgrey, ltgrey)}
 hi LineNr ${hi(grey, black)}

@@ -60,7 +60,8 @@ def make_hi(use_bold=True):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Render vim colorscheme file')
-    parser.add_argument('--disable-bold', dest='use_bold', action='store_false', default=True)
+    parser.add_argument('--disable-bold', dest='use_bold',
+        action='store_false', default=True)
     parser.add_argument('template', nargs='+')
 
     args = parser.parse_args()
