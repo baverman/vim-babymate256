@@ -24,8 +24,8 @@ hi Search guifg=#e3e3e3 ctermfg=254 guibg=#506681 ctermbg=60 gui=none cterm=none
 hi Folded guifg=#666666 ctermfg=241 guibg=#222429 ctermbg=235 gui=none cterm=none
 " hi Title gui=none cterm=none
 hi StatusLine guifg=#15171c ctermfg=233 guibg=#c7c7c7 ctermbg=251 gui=none cterm=none
-hi VertSplit guifg=#c7c7c7 ctermfg=251 guibg=#c7c7c7 ctermbg=251 gui=none cterm=none
 hi StatusLineNC guifg=#666666 ctermfg=241 guibg=#c7c7c7 ctermbg=251 gui=none cterm=none
+hi VertSplit guifg=#c7c7c7 ctermfg=251 guibg=#c7c7c7 ctermbg=251 gui=none cterm=none
 hi LineNr guifg=#666666 ctermfg=241 guibg=#000000 ctermbg=16 gui=none cterm=none
 hi NonText guifg=#666666 ctermfg=241 guibg=#222429 ctermbg=235 gui=none cterm=none
 " hi SpecialKey gui=none cterm=none
@@ -37,8 +37,10 @@ hi Error guifg=#e3e3e3 ctermfg=254 gui=none cterm=none
 if version >= 700
     hi CursorLine guibg=#3a3d45 ctermbg=237 gui=none cterm=none
     hi MatchParen guifg=#e3e3e3 ctermfg=254 guibg=#000000 ctermbg=16 gui=none cterm=none
-    " hi Pmenu gui=none cterm=none
-    " hi PmenuSel gui=none cterm=none
+    hi Pmenu guifg=#e3e3e3 ctermfg=254 guibg=#3a3d45 ctermbg=237 gui=none cterm=none
+    hi PmenuSel guifg=#15171c ctermfg=233 guibg=#c7c7c7 ctermbg=251 gui=none cterm=none
+    hi PmenuSbar guifg=#3a3d45 ctermfg=237 guibg=#3a3d45 ctermbg=237 gui=none cterm=none
+    hi PmenuThumb guifg=#666666 ctermfg=241 guibg=#666666 ctermbg=241 gui=none cterm=none
 endif
 
 " Diff highlighting

@@ -45,8 +45,8 @@ hi Search ${hi(white, slate)}
 hi Folded ${hi(grey, carbon)}
 " hi Title ${hi()}
 hi StatusLine ${hi(asfalto, ltgrey)}
-hi VertSplit ${hi(ltgrey, ltgrey)}
 hi StatusLineNC ${hi(grey, ltgrey)}
+hi VertSplit ${hi(ltgrey, ltgrey)}
 hi LineNr ${hi(grey, black)}
 hi NonText ${hi(grey, carbon)}
 " hi SpecialKey ${hi()}
@@ -58,8 +58,10 @@ hi Error ${hi(white, bold=True)}
 if version >= 700
     hi CursorLine ${hi(bg=ltcarbon)}
     hi MatchParen ${hi(white, black, bold=True)}
-    " hi Pmenu ${hi()}
-    " hi PmenuSel ${hi()}
+    hi Pmenu ${hi(white, ltcarbon)}
+    hi PmenuSel ${hi(asfalto, ltgrey)}
+    hi PmenuSbar ${hi(ltcarbon, ltcarbon)}
+    hi PmenuThumb ${hi(grey, grey)}
 endif
 
 " Diff highlighting
