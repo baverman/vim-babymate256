@@ -42,10 +42,10 @@ if version >= 700
 endif
 
 " Diff highlighting
-hi DiffAdd guifg=#cbf8b0 ctermfg=193 gui=none cterm=none
-hi DiffDelete guifg=#ffc0cb ctermfg=217 gui=none cterm=none
-hi DiffText guifg=#e3e3e3 ctermfg=254 guibg=#222429 ctermbg=235 gui=none cterm=none
-hi DiffChange guifg=#9cbddd ctermfg=110 gui=none cterm=none
+hi DiffAdd guifg=#222429 ctermfg=235 guibg=#cbf8b0 ctermbg=193 gui=none cterm=none
+hi DiffDelete guifg=#222429 ctermfg=235 guibg=#ffc0cb ctermbg=217 gui=none cterm=none
+hi DiffChange guifg=#222429 ctermfg=235 guibg=#9cbddd ctermbg=110 gui=none cterm=none
+hi DiffText guifg=#222429 ctermfg=235 guibg=#d0cffe ctermbg=189 gui=none cterm=none
 
 "hi CursorIM
 "hi Directory

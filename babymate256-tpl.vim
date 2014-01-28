@@ -62,10 +62,10 @@ if version >= 700
 endif
 
 " Diff highlighting
-hi DiffAdd ${hi(babygreen)}
-hi DiffDelete ${hi(babypink)}
-hi DiffText ${hi(white, carbon)}
-hi DiffChange ${hi(babyblue)}
+hi DiffAdd ${hi(carbon, babygreen)}
+hi DiffDelete ${hi(carbon, babypink)}
+hi DiffChange ${hi(carbon, babyblue)}
+hi DiffText ${hi(carbon, violet)}
 
 "hi CursorIM
 "hi Directory
