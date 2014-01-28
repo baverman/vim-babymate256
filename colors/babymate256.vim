@@ -35,7 +35,7 @@ hi Error guifg=#e3e3e3 ctermfg=254 gui=none cterm=none
 
 " Vim >= 7.0 specific colors
 if version >= 700
-    hi CursorLine guibg=#373a42 ctermbg=237 gui=none cterm=none
+    hi CursorLine guibg=#3a3d45 ctermbg=237 gui=none cterm=none
     hi MatchParen guifg=#e3e3e3 ctermfg=254 guibg=#000000 ctermbg=16 gui=none cterm=none
     " hi Pmenu gui=none cterm=none
     " hi PmenuSel gui=none cterm=none
@@ -99,9 +99,9 @@ hi! link pythonBuiltin Builtin
 hi! link pythonKeyword Statement
 
 " xterm color fix:
-" printf '\033]11;#222429\007\033]4;16;#000000;60;#506681;110;#9CBDDD;189;#D0CFFE;193;#CBF8B0;217;#FFC0CB;235;#222429;237;#373A42;241;#666666;254;#E3E3E3\007'
+" printf '\033]11;#222429\007\033]4;16;#000000;60;#506681;110;#9CBDDD;189;#D0CFFE;193;#CBF8B0;217;#FFC0CB;235;#222429;237;#3A3D45;241;#666666;254;#E3E3E3\007'
 
 " urxvt color fix:
 " urxvt -bg #222429
 " urxvt*background: #222429
-" printf '\033]4;16;#000000;60;#506681;110;#9CBDDD;189;#D0CFFE;193;#CBF8B0;217;#FFC0CB;235;#222429;237;#373A42;241;#666666;254;#E3E3E3\007'
+" printf '\033]4;16;#000000;60;#506681;110;#9CBDDD;189;#D0CFFE;193;#CBF8B0;217;#FFC0CB;235;#222429;237;#3A3D45;241;#666666;254;#E3E3E3\007'

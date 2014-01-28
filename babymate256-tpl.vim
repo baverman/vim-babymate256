@@ -26,7 +26,7 @@ endif
     black    = '000000'
     asfalto  = '15171c'
     carbon   = '222429'
-    ltcarbon = '373a42'
+    ltcarbon = '3a3d45'
     slate    = '506681'
     grey     = '666666'
 
