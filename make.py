@@ -12,7 +12,7 @@ def make_hi(module, use_bold=True):
     colors = set()
     def get_256_color(color):
         c256 = tcolor.find_nearest(color)[1]
-        colors.add((c256, color.upper()))
+        colors.add((int(c256), color.upper()))
         return c256
 
     def hi(fg=None, bg=None, bold=None, italic=None, underline=None, reverse=None):
@@ -48,12 +48,12 @@ def make_hi(module, use_bold=True):
 
         return ' '.join('{}={}'.format(*r) for r in parts)
 
-    def fix():
-        cfix = ''.join(r'\033]4;{};#{}\007'.format(*r) for r in colors)
-        bgfix = r'\033]11;#{}\007'.format(module.background)
-        return bgfix + cfix
+    bgfix = lambda: r'\033]11;#{}\007'.format(module.background)
+    cfix = lambda: r'\033]4;{}\007'.format(
+        ';'.join('{};#{}'.format(*r) for r in sorted(colors)))
 
-    hi.fix = fix
+    hi.xterm = lambda: bgfix() + cfix()
+    hi.urxvt = cfix
     return hi
 
 

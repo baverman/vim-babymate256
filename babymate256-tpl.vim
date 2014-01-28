@@ -117,4 +117,10 @@ hi! link ColorColumn CursorLine
 hi! link pythonBuiltin Builtin
 hi! link pythonKeyword Statement
 
-let g:babymate_color_fix = '${hi.fix()}'
+" xterm color fix:
+" printf '${hi.xterm()}'
+
+" urxvt color fix:
+" urxvt -bg #${background}
+" urxvt*background: #${background}
+" printf '${hi.urxvt()}'
