@@ -12,7 +12,8 @@ if version > 580
 endif
 
 <%!
-    colors_name = 'babymate256'
+    name = 'babymate256'
+    out = 'colors/' + name + '.vim'
 
     # light
     white     = 'e3e3e3'
@@ -25,14 +26,14 @@ endif
     black    = '000000'
     asfalto  = '15171c'
     carbon   = '222429'
-    ltcarbon = '31333b'
+    ltcarbon = '373a42'
     slate    = '506681'
     grey     = '666666'
 
     background = carbon
 %>
 
-let colors_name = "${colors_name}"
+let colors_name = "${name}"
 
 " General colors
 hi Normal ${hi(white, carbon)}
@@ -118,7 +119,7 @@ hi! link pythonBuiltin Builtin
 hi! link pythonKeyword Statement
 
 " xterm color fix:
-" printf '${hi.xterm()}'
+" printf '${hi.xterm(background)}'
 
 " urxvt color fix:
 " urxvt -bg #${background}

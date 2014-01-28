@@ -2,13 +2,14 @@
 import sys
 import os.path
 import argparse
+import shutil
 
 from mako.template import Template
 
 import tcolor
 
 
-def make_hi(module, use_bold=True):
+def make_hi(use_bold=True):
     colors = set()
     def get_256_color(color):
         c256 = tcolor.find_nearest(color)[1]
@@ -48,11 +49,11 @@ def make_hi(module, use_bold=True):
 
         return ' '.join('{}={}'.format(*r) for r in parts)
 
-    bgfix = lambda: r'\033]11;#{}\007'.format(module.background)
+    bgfix = lambda bg: r'\033]11;#{}\007'.format(bg)
     cfix = lambda: r'\033]4;{}\007'.format(
         ';'.join('{};#{}'.format(*r) for r in sorted(colors)))
 
-    hi.xterm = lambda: bgfix() + cfix()
+    hi.xterm = lambda bg: bgfix(bg) + cfix()
     hi.urxvt = cfix
     return hi
 
@@ -60,12 +61,16 @@ def make_hi(module, use_bold=True):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Render vim colorscheme file')
     parser.add_argument('--disable-bold', dest='use_bold', action='store_false', default=True)
-    parser.add_argument('template')
+    parser.add_argument('template', nargs='+')
 
     args = parser.parse_args()
 
-    tpl = Template(filename=args.template)
-    name = tpl.module.colors_name
-    fname = os.path.join('colors', name + '.vim')
-    with open(fname, 'w') as f:
-        f.write(tpl.render(hi=make_hi(tpl.module, args.use_bold)))
+    hi = make_hi(args.use_bold)
+
+    for fname in args.template:
+        tpl = Template(filename=fname)
+        outname = os.path.expanduser(tpl.module.out)
+        with open(outname, 'w') as f:
+            f.write(tpl.render(hi=hi))
+
+        shutil.copymode(fname, outname)
