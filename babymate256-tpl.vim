@@ -21,6 +21,7 @@ endif
     violet    = 'd0cffe'
     babypink  = 'ffc0cb'
     babyblue  = '9cbddd'
+    ltgrey    = 'c7c7c7'
 
     # dark
     black    = '000000'
@@ -43,9 +44,9 @@ hi VisualNOS ${hi(white, grey)}
 hi Search ${hi(white, slate)}
 hi Folded ${hi(grey, carbon)}
 " hi Title ${hi()}
-" hi StatusLine ${hi()}
-" hi VertSplit ${hi()}
-" hi StatusLineNC ${hi()}
+hi StatusLine ${hi(asfalto, ltgrey)}
+hi VertSplit ${hi(ltgrey, ltgrey)}
+hi StatusLineNC ${hi(grey, ltgrey)}
 hi LineNr ${hi(grey, black)}
 hi NonText ${hi(grey, carbon)}
 " hi SpecialKey ${hi()}
