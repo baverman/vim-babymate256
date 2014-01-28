@@ -41,7 +41,7 @@ hi Cursor ${hi(carbon, white)}
 hi Visual ${hi(bg=slate)}
 hi VisualNOS ${hi(white, grey)}
 hi Search ${hi(white, slate)}
-" hi Folded ${hi()}
+hi Folded ${hi(grey, carbon)}
 " hi Title ${hi()}
 " hi StatusLine ${hi()}
 " hi VertSplit ${hi()}
