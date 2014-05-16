@@ -67,11 +67,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     hi = make_hi(args.use_bold)
+    theme_tpl = None
 
     for fname in args.template:
         tpl = Template(filename=fname)
         outname = os.path.expanduser(tpl.module.out)
         with open(outname, 'w') as f:
-            f.write(tpl.render(hi=hi))
+            f.write(tpl.render(hi=hi, theme_tpl=theme_tpl))
 
         shutil.copymode(fname, outname)
+        if not theme_tpl:
+            theme_tpl = tpl.module
