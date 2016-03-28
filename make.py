@@ -55,6 +55,7 @@ def make_hi(use_bold=True):
 
     hi.xterm = lambda bg: bgfix(bg) + cfix()
     hi.urxvt = cfix
+    hi.cterm = get_256_color
     return hi
 
 
@@ -73,7 +74,7 @@ if __name__ == '__main__':
         tpl = Template(filename=fname)
         outname = os.path.expanduser(tpl.module.out)
         with open(outname, 'w') as f:
-            f.write(tpl.render(hi=hi, theme_tpl=theme_tpl))
+            f.write(tpl.render(hi=hi, cterm=hi.cterm, theme_tpl=theme_tpl))
 
         shutil.copymode(fname, outname)
         if not theme_tpl:
